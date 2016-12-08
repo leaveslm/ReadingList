@@ -18,8 +18,6 @@ public class ReadingListController {
 
     private ReadingListRepository readingListRepository;
 
-    private static final String reader = "leaves";
-
     @Autowired
     public ReadingListController(ReadingListRepository readingListRepository) {
         this.readingListRepository = readingListRepository;
