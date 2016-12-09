@@ -5,13 +5,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity //JPA实体
 public class Book {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id //实体的唯一标识
+    @GeneratedValue(strategy = GenerationType.AUTO) //字段的值自动生成
     private Long id;
-    private String reader;
+
+    private Reader reader;
     private String isbn;
     private String title;
     private String author;
@@ -25,11 +26,11 @@ public class Book {
         this.id = id;
     }
 
-    public String getReader() {
+    public Reader getReader() {
         return reader;
     }
 
-    public void setReader(String reader) {
+    public void setReader(Reader reader) {
         this.reader = reader;
     }
 
